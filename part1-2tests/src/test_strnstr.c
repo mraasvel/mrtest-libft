@@ -41,6 +41,6 @@ int	test_strnstr(void)
 	strnstr_compare_functions("abc", "abcd", 1024);
 	strnstr_compare_functions("abcd", "abcd", 1024);
 	strnstr_compare_functions("abcd", "abcd", 3);
-	print_end_msg("STRNSTR");
+	print_end_msg("\t\t\tSTRNSTR");
 	return (0);
 }

@@ -38,6 +38,6 @@ int	test_memchr(void)
 	memchr_compare_functions("1234567890", '9', 10);
 	memchr_compare_functions("", 'a', 1);
 	memchr_compare_functions("", 0, 1);
-	print_end_msg("MEMCHR");
+	print_end_msg("\t\t\t\tMEMCHR");
 	return (0);
 }

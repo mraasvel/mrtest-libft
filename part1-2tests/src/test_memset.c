@@ -48,6 +48,6 @@ int	test_memset(void)
 	memset_compare_functions(900, 1024);
 	memset_compare_functions(10, 128 * 1024 * 1024);
 	memset_compare_functions(100, 0);
-	print_end_msg("MEMSET");
+	print_end_msg("\t\t\t\t\tMEMSET");
 	return (0);
 }

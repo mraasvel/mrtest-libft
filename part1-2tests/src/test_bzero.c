@@ -52,6 +52,6 @@ int		test_bzero(void)
 	bzero_compare_functions(16711568);
 	bzero_compare_functions(128 * 1024 * 1024);
 	bzero_compare_functions(0);
-	print_end_msg("BZERO");
+	print_end_msg("\t\t\t\t\tBZERO");
 	return (0);
 }

@@ -45,6 +45,6 @@ int	test_isalnum(void)
 	}
 	else
 		print_success_message(0);
-	print_end_msg("ISALNUM");
+	print_end_msg("\t\t\t\t\t\t\tISALNUM");
 	return (0);
 }

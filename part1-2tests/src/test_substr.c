@@ -46,6 +46,6 @@ int	test_substr(void)
 	substr_compare_function("1234567890ofdsiaoijafsd", 0, 500, "1234567890ofdsiaoijafsd");
 	substr_compare_function("", 0, 500, "");
 	substr_compare_function("", 50, 500, "");
-	print_end_msg("SUBSTR");
+	print_end_msg("\t\t\tSUBSTR");
 	return (0);
 }

@@ -62,6 +62,6 @@ int	test_strdup(void)
 	strdup_compare_functions("1234567890");
 	strdup_compare_functions("12345\012345");
 	strdup_compare_functions("ad9fuanjdsadcaisdcadcscdsaidcasiuhcdsaiuhdsaciuhdsaciuhadsciuhasdiua\t\nsdc");
-	print_end_msg("STRDUP");
+	print_end_msg("\t\t\t\t\tSTRDUP");
 	return (0);
 }

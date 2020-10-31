@@ -102,6 +102,6 @@ int	test_memmove(void)
 	memmove_compare_functions('a', 1024);
 	memmove_compare_functions('b', 1024);
 	memmove_test_overlapping_area();
-	print_end_msg("MEMMOVE");
+	print_end_msg("\t\t\t\tMEMMOVE");
 	return (0);
 }

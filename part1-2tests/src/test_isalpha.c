@@ -45,6 +45,6 @@ int	test_isalpha(void)
 	}
 	else
 		print_success_message(0);
-	print_end_msg("ISALPHA");
+	print_end_msg("\t\t\t\t\t\t\tISALPHA");
 	return (0);
 }

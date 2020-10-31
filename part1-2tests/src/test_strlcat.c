@@ -76,6 +76,6 @@ int	test_strlcat(void)
 	strlcat_compare_functions("1234567890", "", 100);
 	strlcat_compare_functions("1234567890", "1", 0);
 	strlcat_compare_functions("12345pifdhsiuhafdsadiuhsaiuhadfiuhiaufds67890", "1usfdsfdihaiuhfdsaiuhfdsaifsuhdaiuhsfdaiuhfdsaiuhafdsaiuhfdasfiuhafdiuhaiuhs", 128 * 1024 * 1024);
-	print_end_msg("STRLCAT");
+	print_end_msg("\t\t\tSTRLCAT");
 	return (0);
 }

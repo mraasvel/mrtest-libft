@@ -40,6 +40,6 @@ int	test_strrchr(void)
 	strrchr_compare_functions("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", '1');
 	strrchr_compare_functions("", '\0');
 	strrchr_compare_functions("", '1');
-	print_end_msg("STRRCHR");
+	print_end_msg("\t\t\tSTRRCHR");
 	return (0);
 }

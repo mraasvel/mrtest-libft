@@ -45,6 +45,6 @@ int	test_isascii(void)
 	}
 	else
 		print_success_message(0);
-	print_end_msg("ISASCII");
+	print_end_msg("\t\t\t\t\t\t\tISASCII");
 	return (0);
 }

@@ -46,6 +46,6 @@ int	test_tolower(void)
 	}
 	else
 		print_success_message(0);
-	print_end_msg("TOLOWER");
+	print_end_msg("\t\t\t\t\t\t\tTOLOWER");
 	return (0);
 }

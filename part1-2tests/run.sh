@@ -1,1 +1,2 @@
-make && ./a.out 2> results.log
+make
+./a.out $@ 2> results.log

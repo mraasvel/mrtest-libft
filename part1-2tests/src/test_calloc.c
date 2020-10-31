@@ -68,6 +68,6 @@ int	test_calloc(void)
 	calloc_compare_functions(0, 50);
 	calloc_compare_functions(1, 25);
 	calloc_compare_functions(1, 128 * 1024 * 1024);
-	print_end_msg("CALLOC");
+	print_end_msg("\t\t\t\t\tCALLOC");
 	return (0);
 }

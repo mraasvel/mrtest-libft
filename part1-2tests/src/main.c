@@ -73,8 +73,10 @@ int	main(int argc, char **argv)
 		test_memmove();
 	if (argc == 1 || find_function_name(argc, argv, "ft_memchr") == 0)
 		test_memchr();
-	if (argc == 1 || find_function_name(argc, argv, "ft_memcp") == 0)
+	if (argc == 1 || find_function_name(argc, argv, "ft_memcmp") == 0)
 		test_memcmp();
+	if (argc == 1 || find_function_name(argc, argv, "ft_strlen") == 0)
+		test_strlen();
 	#ifdef STRLS
 	if (argc == 1 || find_function_name(argc, argv, "ft_strlcpy") == 0)
 		test_strlcpy();

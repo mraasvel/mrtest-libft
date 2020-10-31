@@ -45,6 +45,6 @@ int	test_itoa(void)
 	// itoa_compare_function(4294967295, "-1");
 	itoa_compare_function(2147483647, "2147483647");
 	itoa_compare_function(-2147483648, "-2147483648");
-	print_end_msg("ITOA");
+	print_end_msg("\t\t\t\tITOA");
 	return (0);
 }

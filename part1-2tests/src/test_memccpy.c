@@ -66,6 +66,6 @@ int	test_memccpy(void)
 	memccpy_compare_functions('1', 0);
 	memccpy_compare_functions('1', 1);
 	memccpy_compare_functions('1', 1024 * 1024 * 128);
-	print_end_msg("MEMCCPY");
+	print_end_msg("\t\t\t\t\tMEMCCPY");
 	return (0);
 }

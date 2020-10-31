@@ -44,6 +44,6 @@ int	test_strjoin(void)
 	strjoin_compare_functions("1234567890", "", "1234567890");
 	strjoin_compare_functions("12345\0 67890", "\t\0", "12345\t");
 	strjoin_compare_functions("", "", "");
-	print_end_msg("STRJOIN");
+	print_end_msg("\t\t\t\t\tSTRJOIN");
 	return (0);
 }

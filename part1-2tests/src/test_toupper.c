@@ -45,6 +45,6 @@ int	test_toupper(void)
 	}
 	else
 		print_success_message(0);
-	print_end_msg("TOUPPER");
+	print_end_msg("\t\t\t\t\t\t\tTOUPPER");
 	return (0);
 }

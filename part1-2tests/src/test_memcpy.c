@@ -107,6 +107,6 @@ int	test_memcpy(void)
 	memcpy_compare_functions('a', 1024);
 	memcpy_compare_functions('b', 1024);
 	memcpy_compare_returns();
-	print_end_msg("MEMCPY");
+	print_end_msg("\t\t\t\tMEMCPY");
 	return (0);
 }

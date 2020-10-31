@@ -90,6 +90,6 @@ int	test_strlcpy(void)
 	strlcpy_compare_functions("1234567890", 0);
 	strlcpy_compare_functions("d9sd8fu a9fds8 9d8f9 8sdfa9 8sdf89 fsdas9da8f ", 10000);
 	strlcpy_compare_functions("aijfsdoijfdsaaoijsfdajsfdoijafsdoijfsdaafsijdofsdia", 20);
-	print_end_msg("STRLCPY");
+	print_end_msg("\t\t\t\tSTRLCPY");
 	return (0);
 }

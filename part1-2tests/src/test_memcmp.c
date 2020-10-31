@@ -39,6 +39,6 @@ int	test_memcmp(void)
 	memcmp_compare_functions("1234567890", "123456789a", 10);
 	memcmp_compare_functions("1234z67890", "123456789a", 10);
 	memcmp_compare_functions("", "", 1);
-	print_end_msg("MEMCMP");
+	print_end_msg("\t\t\t\tMEMCMP");
 	return (0);
 }

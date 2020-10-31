@@ -38,6 +38,6 @@ int	test_strlen(void)
 	strlen_compare_functions("12345\067890");
 	strlen_compare_functions("1234567890");
 	strlen_compare_functions("r\0r");
-	print_end_msg("STRLEN");
+	print_end_msg("\t\t\t\tSTRLEN");
 	return (0);
 }

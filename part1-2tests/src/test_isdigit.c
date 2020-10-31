@@ -45,6 +45,6 @@ int	test_isdigit(void)
 	}
 	else
 		print_success_message(0);
-	print_end_msg("ISDIGIT");
+	print_end_msg("\t\t\t\t\t\t\tISDIGIT");
 	return (0);
 }

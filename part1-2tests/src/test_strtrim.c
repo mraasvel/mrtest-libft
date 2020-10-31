@@ -51,6 +51,6 @@ int	test_strtrim(void)
 	strtrim_compare_functions("aabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaa", "a", "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaac");
 	strtrim_compare_functions("aabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaa", "ab", "c");
 	strtrim_compare_functions("aabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaa", "abc", "");
-	print_end_msg("STRTRIM");
+	print_end_msg("\t\tSTRTRIM");
 	return (0);
 }

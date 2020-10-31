@@ -59,6 +59,6 @@ int	test_strmapi(void)
 	strmapi_compare_function("Z", "Z", &even_toupper_else);
 	strmapi_compare_function("ZZ", "Zz", &even_toupper_else);
 	strmapi_compare_function("ZZ", "zZ", &odd_toupper_else);
-	print_end_msg("STRMAPI");
+	print_end_msg("\t\t\t\tSTRMAPI");
 	return (0);
 }

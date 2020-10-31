@@ -24,9 +24,12 @@ all: $(NAME)
 .PHONY: all clean fclean re
 
 $(NAME): $(OBJS)
-	$(CC) -o $@ $(DEBUG) $^ $(LIBFLAGLINUX)
-$(OBJDIR)/%.o: %.c
+	$(CC) -o $@ $(DEBUG) $(OBJS) $(LIBFLAGLINUX)
+$(OBJDIR)/%.o: %.c | $(OBJDIR)
 	$(CC) -o $@ $(CFLAGS) $(IFLAGS) $<
+
+$(OBJDIR):
+	mkdir -p $@
 
 main.o: mrtest.h
 $(NAME): ../libft.a
