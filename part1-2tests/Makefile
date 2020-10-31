@@ -10,7 +10,8 @@ CFLAGS = -c -Wall -Wextra -Werror
 DEBUG = -O0 -g -fsanitize=address
 # DEBUG = 
 IFLAGS = -I include
-LIBFLAG = -L.. -lft -lbsd
+LIBFLAGLINUX = -L.. -lft -lbsd
+LIBFLAG = -L.. -lft
 
 #DIRS
 OBJDIR = ./obj
@@ -23,7 +24,7 @@ all: $(NAME)
 .PHONY: all clean fclean re
 
 $(NAME): $(OBJS)
-	$(CC) -o $@ $(DEBUG) $^ $(LIBFLAG)
+	$(CC) -o $@ $(DEBUG) $^ $(LIBFLAGLINUX)
 $(OBJDIR)/%.o: %.c
 	$(CC) -o $@ $(CFLAGS) $(IFLAGS) $<
 
