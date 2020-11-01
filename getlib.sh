@@ -1,1 +1,1 @@
-make -C ../libft/ && mv ../create_lib/libft.a .
+make bonus -C ../libft/ && mv ../libft/libft.a . && make clean -C ../libft/

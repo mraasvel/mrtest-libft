@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 14:02:24 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/10/31 14:02:25 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/11/01 23:32:10 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,15 @@ int	print_success_message(int b)
 void	print_start_msg(char *f_name)
 {
 	printf("%s START\t", f_name);
-	fprintf(stderr, "%s: ", f_name);
+	fprintf(stderr, "%s:\t", f_name);
+	if (strlen(f_name) < 7)
+		fprintf(stderr, "\t");
 }
 
 void	print_end_msg(char *f_name)
 {
 	printf("\t%s END\n", f_name);
-	fprintf(stderr, "\t%s END\n", f_name);
+	fprintf(stderr, "\n");
 }
 
 void	print_bytes(void *s, size_t n)
@@ -135,6 +137,6 @@ int	main(int argc, char **argv)
 		test_itoa();
 	if (argc == 1 || find_function_name(argc, argv, "ft_strmapi") == 0)
 		test_strmapi();
-
+	test_segfaults();
 	return (0);
 }

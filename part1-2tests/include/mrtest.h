@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 13:00:05 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/10/30 10:52:00 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/11/01 23:35:22 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,15 @@ int		test_toupper(void);
 int		test_tolower(void);
 int		test_calloc(void);
 int		test_strdup(void);
-int		test_strjoin(void);
-int		test_strtrim(void);
-int		test_itoa(void);
-int		test_strmapi(void);
 
 /* part 2 */
 int		test_substr(void);
-
+int		test_strjoin(void);
+int		test_strtrim(void);
 int		test_split(void);
+int		test_itoa(void);
+int		test_strmapi(void);
 
+/* segfaults */
+int		test_segfaults(void);
 #endif

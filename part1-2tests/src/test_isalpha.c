@@ -21,6 +21,8 @@ int	isalpha_compare_functions(int c)
 	}
 	else
 	{
+		print_success_message(-1);
+		isalpha_error(c, ft, st);
 		return (-1);
 	}
 }
@@ -31,19 +33,15 @@ int	test_isalpha(void)
 
 	print_start_msg("ISALPHA");
 	fail = 0;
-	for (int i = 0; i <= 256; i++)
+	for (int i = -128; i < 256; i++)
 	{
 		if (isalpha_compare_functions(i) == -1)
 		{
 			fail = -1;
+			break ;
 		}
 	}
-	if (fail == -1)
-	{
-		fprintf(stderr, "[KO]");
-		print_success_message(-1);
-	}
-	else
+	if (fail != -1)
 		print_success_message(0);
 	print_end_msg("\t\t\t\t\t\t\tISALPHA");
 	return (0);
