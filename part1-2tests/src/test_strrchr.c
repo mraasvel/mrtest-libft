@@ -38,6 +38,11 @@ int	test_strrchr(void)
 	strrchr_compare_functions("123456ads9hf9asdfasdfuhasdfiuasd\tiufaisdciasdciasdincainsdcniasd\tciunasiducnasiudcnaiusdncasdc78\t90", '\t');
 	strrchr_compare_functions("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", 'a');
 	strrchr_compare_functions("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", '1');
+	strrchr_compare_functions("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", 0);
+	strrchr_compare_functions("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", '1');
+	strrchr_compare_functions("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", '1');
+	strrchr_compare_functions("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", 'a');
+	strrchr_compare_functions("aaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaa1", 'b');
 	strrchr_compare_functions("", '\0');
 	strrchr_compare_functions("", '1');
 	print_end_msg("\t\t\tSTRRCHR");
