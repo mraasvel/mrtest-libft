@@ -11,95 +11,15 @@ STRLCAT:	[OK][OK][OK][OK][OK][OK][OK][OK]
 STRCHR:		[OK][OK][OK][OK][OK][OK][OK][OK]
 STRRCHR:	[OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK]
 STRNSTR:	[OK][OK][OK][OK][OK][OK][OK][OK]
-STRNCMP:	
+STRNCMP:	[OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][KO]
 FT_STRNCMP input error:
 input:
-|1234567890| - s1
-|1234567890| - s2
-|5| - n
-strncmp: |0| ft_strncmp: |0|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|1234567890| - s1
-|123456789a| - s2
-|10| - n
-strncmp: |-1| ft_strncmp: |-49|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|1234567890| - s1
-|1234567890| - s2
+|123| - s1
+|abc| - s2
 |0| - n
-strncmp: |0| ft_strncmp: |0|
+strncmp: |0| ft_strncmp: |-48|
 
-[OK]
-FT_STRNCMP input error:
-input:
-|1234567890| - s1
-|123456789a| - s2
-|5| - n
-strncmp: |0| ft_strncmp: |0|
 
-[OK]
-FT_STRNCMP input error:
-input:
-|1234567890| - s1
-|123456789a| - s2
-|100| - n
-strncmp: |-1| ft_strncmp: |-49|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|1234567890a| - s1
-|1234567890| - s2
-|100| - n
-strncmp: |1| ft_strncmp: |97|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|123456789a| - s1
-|1234567890| - s2
-|100| - n
-strncmp: |1| ft_strncmp: |49|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|1234567890| - s1
-|1234567890| - s2
-|100| - n
-strncmp: |0| ft_strncmp: |0|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|1| - s1
-|| - s2
-|100| - n
-strncmp: |1| ft_strncmp: |49|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|| - s1
-|1| - s2
-|100| - n
-strncmp: |-1| ft_strncmp: |-49|
-
-[OK]
-FT_STRNCMP input error:
-input:
-|| - s1
-|| - s2
-|100| - n
-strncmp: |0| ft_strncmp: |0|
-
-[OK]
 ATOI:		[OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK][OK]
 ISALPHA:	[OK]
 ISDIGIT:	[OK]
@@ -124,41 +44,42 @@ FT_STRTRIM: [OK]
 FT_SPLIT: [OK]
 FT_STRMAPI: [OK]
 =================================================================
-==35619==ERROR: LeakSanitizer: detected memory leaks
+==36373==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 1 byte(s) in 1 object(s) allocated from:
-    #0 0x7f0e5bbc4bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
-    #1 0x560af5c25ebf in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ebf)
-    #2 0x560af5c26031 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6031)
-    #3 0x560af5c22d2e in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d2e)
-    #4 0x7f0e5b8d20b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #0 0x7f1f231a77cf in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.5+0x10d7cf)
+    #1 0x564fe326a394 in free_ptrs (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5394)
+    #2 0x564fe326a5c8 in memcpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x55c8)
+    #3 0x564fe326a6f7 in test_memcpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x56f7)
+    #4 0x564fe3267d1f in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d1f)
+    #5 0x7f1f22eb50b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
 
 Direct leak of 1 byte(s) in 1 object(s) allocated from:
-    #0 0x7f0e5bbc4bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
-    #1 0x560af5c25ecf in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ecf)
-    #2 0x560af5c26031 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6031)
-    #3 0x560af5c22d2e in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d2e)
-    #4 0x7f0e5b8d20b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #0 0x7f1f231a7bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
+    #1 0x564fe326aed7 in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ed7)
+    #2 0x564fe326b049 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6049)
+    #3 0x564fe3267d46 in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d46)
+    #4 0x7f1f22eb50b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
 
 Direct leak of 1 byte(s) in 1 object(s) allocated from:
-    #0 0x7f0e5bbc4bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
-    #1 0x560af5c25ecf in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ecf)
-    #2 0x560af5c26040 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6040)
-    #3 0x560af5c22d2e in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d2e)
-    #4 0x7f0e5b8d20b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #0 0x7f1f231a7bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
+    #1 0x564fe326aee7 in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ee7)
+    #2 0x564fe326b049 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6049)
+    #3 0x564fe3267d46 in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d46)
+    #4 0x7f1f22eb50b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
 
 Direct leak of 1 byte(s) in 1 object(s) allocated from:
-    #0 0x7f0e5bbc4bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
-    #1 0x560af5c23cef in memmove_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x3cef)
-    #2 0x560af5c23f4e in test_memmove (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x3f4e)
-    #3 0x560af5c22d55 in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d55)
-    #4 0x7f0e5b8d20b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #0 0x7f1f231a7bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
+    #1 0x564fe326aee7 in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ee7)
+    #2 0x564fe326b058 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6058)
+    #3 0x564fe3267d46 in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d46)
+    #4 0x7f1f22eb50b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
 
 Direct leak of 1 byte(s) in 1 object(s) allocated from:
-    #0 0x7f0e5bbc4bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
-    #1 0x560af5c25ebf in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ebf)
-    #2 0x560af5c26040 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6040)
-    #3 0x560af5c22d2e in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d2e)
-    #4 0x7f0e5b8d20b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #0 0x7f1f231a7bc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
+    #1 0x564fe326aed7 in memccpy_compare_functions (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x5ed7)
+    #2 0x564fe326b058 in test_memccpy (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x6058)
+    #3 0x564fe3267d46 in main (/home/maarten/work/codam/mrtest/mrtest-libft/part1-2tests/a.out+0x2d46)
+    #4 0x7f1f22eb50b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
 
 SUMMARY: AddressSanitizer: 5 byte(s) leaked in 5 allocation(s).
