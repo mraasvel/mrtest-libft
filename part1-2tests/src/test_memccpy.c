@@ -34,9 +34,10 @@ int	memccpy_compare_functions(int c, size_t n)
 	s = (char*)malloc(n * sizeof(char));
 	f = (char*)malloc(n * sizeof(char));
 	src = (char*)malloc(n * sizeof(char));
-	if (f == 0 || s == 0 || src == 0)
+	if (src == 0 || f == 0 || s == 0)
 	{
-		free_ptrs(f, s, src);
+		if (n != 0)
+			free_ptrs(f, s, src);
 		return (1);
 	}
 	src = memset(src, c - 1, n);
@@ -46,14 +47,16 @@ int	memccpy_compare_functions(int c, size_t n)
 	if (memcmp(f, s, n) == 0)
 	{
 		print_success_message(0);
-		free_ptrs(f, s, src);
+		if (n != 0)
+			free_ptrs(f, s, src);
 		return (0);
 	}
 	else
 	{
 		print_success_message(-1);
 		memccpy_error(f, s, c, n);
-		free_ptrs(f, s, src);
+		if (n != 0)
+			free_ptrs(f, s, src);
 		return (0);
 	}
 	

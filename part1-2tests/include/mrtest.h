@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 13:00:05 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/11/01 23:35:22 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/11/02 16:36:58 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		test_strlcat(void);
 int		test_strchr(void);
 int		test_strrchr(void);
 int		test_strnstr(void);
+int		test_strncmp(void);
 int		test_atoi(void);
 int		test_isalpha(void);
 int		test_isdigit(void);

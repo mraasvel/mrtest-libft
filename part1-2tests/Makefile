@@ -6,9 +6,10 @@ OBJS = $(addprefix $(OBJDIR)/, $(OBJ))
 
 # Compilation
 CC = gcc
-CFLAGS = -c -Wall -Wextra -Werror
+# CFLAGS = -c -Wall -Wextra -Werror
+CFLAGS = -c
 DEBUG = -O0 -g -fsanitize=address
-# DEBUG = 
+# DEBUG =
 IFLAGS = -I include
 LIBFLAGLINUX = -L.. -lft -lbsd
 LIBFLAG = -L.. -lft

@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 14:02:24 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/11/01 23:32:10 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/11/02 16:36:48 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,8 @@ int	main(int argc, char **argv)
 		test_strrchr();
 	if (argc == 1 || find_function_name(argc, argv, "ft_strnstr") == 0)
 		test_strnstr();
+	if (argc == 1 || find_function_name(argc, argv, "ft_strncmp") == 0)
+		test_strncmp();
 	if (argc == 1 || find_function_name(argc, argv, "ft_atoi") == 0)
 		test_atoi();
 	if (argc == 1 || find_function_name(argc, argv, "ft_isalpha") == 0)
