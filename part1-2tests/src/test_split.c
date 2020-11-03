@@ -62,7 +62,7 @@ int	split_compare_functions(const char **expected, char *s, char c)
 	if (expected[0] == 0 && results[0] != 0)
 	{
 		print_success_message(-1);
-		split_error(expected, result, s, c);
+		split_error(expected, results, s, c);
 		fprintf(stderr, "FT_SPLIT returned NONNULL when it should have returned a pointer to NULL pointer\n\n");
 		return (-1);
 	}
