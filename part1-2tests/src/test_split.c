@@ -91,6 +91,7 @@ int	test_split(void)
 	const char *e3[] = {"132sdfasdjfjasdoicjaosidjcoaisdjf02u13  0asdf09asd f0 f09 iasd09fi asd0f", NULL};
 	const char *e4[] = {"b", "b", NULL};
 	const char *e5[] = {"b", NULL};
+	const char *e6[] = {"1234", NULL};
 
 	print_start_msg("FT_SPLIT");
 	split_compare_functions(e0, "aaaaaaaaaaaaaaaaa", 'a');
@@ -101,6 +102,7 @@ int	test_split(void)
 	split_compare_functions(e5, "aaaaaaaaaaaaaaaaab", 'a');
 	split_compare_functions(e5, "baaaaaaaaaaaaaaaaa", 'a');
 	split_compare_functions(e5, "aaaaaaaaabaaaaaaaa", 'a');
+	split_compare_functions(e6, "1234", '\0');
 	split_compare_functions(e0, "a", 'a');
 	split_compare_functions(e5, "b", 'a');
 	split_compare_functions(e5, "ba", 'a');
