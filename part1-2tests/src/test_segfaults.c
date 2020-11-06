@@ -52,7 +52,7 @@ void	segfault_strmapi(void)
 {
 	ft_strmapi(0, 0);
 	ft_strmapi(0, &lol);
-	// ft_strmapi("abc", 0);
+	ft_strmapi("abc", 0);
 }
 
 int	test_segfaults(void)
