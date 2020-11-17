@@ -47,6 +47,9 @@ int	test_strncmp(void)
 	strncmp_compare_function("a", "", 0);
 	strncmp_compare_function("", "a", 0);
 	strncmp_compare_function("123", "abc", 0);
+	strncmp_compare_function("abcd", "abcd", 4);
+	strncmp_compare_function("abcd", "abce", 3);
+	strncmp_compare_function("abcd", "abd", 3);
 	print_end_msg("STRNCMP");
 	return (0);
 }
