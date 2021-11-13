@@ -1,4 +1,8 @@
-a.out
-libft.a
+.DS_Store
+.vscode
 *.o
-results.log
+*.a
+*.d
+*.so
+a.out*
+*.out
