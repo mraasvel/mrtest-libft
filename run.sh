@@ -1,0 +1,1 @@
+make && ./mrtest.out $@
