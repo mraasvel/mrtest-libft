@@ -51,8 +51,6 @@ int	strdup_compare_functions(const char *src)
 		free_ptrs(ft_ret, st_ret);
 		return (-1);
 	}
-	
-
 }
 
 int	test_strdup(void)

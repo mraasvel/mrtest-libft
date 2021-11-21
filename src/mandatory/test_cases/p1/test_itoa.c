@@ -10,6 +10,7 @@ static bool AssertItoa(int n, const char* expected) {
 	}
 
 	if (strcmp(x, expected) != 0) {
+		free(x);
 		return false;
 	}
 

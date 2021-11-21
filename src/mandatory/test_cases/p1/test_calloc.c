@@ -32,5 +32,4 @@ TEST_CASE("TestCalloc", "calloc") {
 	MRTEST(callocCompare(50, 0));
 	MRTEST(callocCompare(0, 50));
 	MRTEST(callocCompare(1, 25));
-	MRTEST(callocCompare(1, 128 * 1024 * 1024));
 }

@@ -1,18 +1,3 @@
-Tests:
-
-memset
-memcpy
-memmove
-strlcpy
-strlcat
-strchr
-strrchr
-strncmp
-memchr
-memcmp
-strnstr
-strdup
-
 Extra:
 
 ft_substr

@@ -28,5 +28,5 @@ static bool bzeroSizeTest(size_t n) {
 
 TEST_CASE("TestBzero", "bzero") {
 	MRTEST(bzeroSizeTest(1));
-	MRTEST(bzeroSizeTest(128 * 1024 * 1024));
+	MRTEST(bzeroSizeTest(1024));
 }

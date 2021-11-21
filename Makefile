@@ -35,8 +35,8 @@ DEP := $(patsubst $(SDIR)/%.c,$(DDIR)/%.d,$(SRC))
 
 # Compilation
 all:
-	@$(MAKE) -C $(LFT_LOCATION)
-	@$(MAKE) $(NAME)
+	@$(MAKE) -C $(LFT_LOCATION) -j8
+	@$(MAKE) $(NAME) -j8
 
 $(NAME): $(OBJ) $(LFT)
 		$(CC) -o $@ $(OBJ) $(LFLAGS)
