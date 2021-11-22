@@ -1,9 +1,5 @@
 Extra:
 
-ft_substr
-ft_strjoin
-ft_strtrim
-ft_split
 ft_strmapi
 ft_striteri
 ft_putchar_fd
@@ -22,3 +18,12 @@ ft_lstdelone
 ft_lstclear
 ft_lstiter
 ft_lstmap
+
+Other:
+
+	- Generic syscall error functionality
+	- Syscall failure tester dlsym
+	- Malloc leak overwrite tester
+	- Moulinette, norminette check using simple script
+	- Script to run all testers together
+	- Easier to read error output
