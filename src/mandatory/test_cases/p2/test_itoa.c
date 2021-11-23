@@ -1,12 +1,12 @@
 #include "libft.h"
 #include "mrtest.h"
+#include "mrtest_libft.h"
 #include <stdbool.h>
 
 static bool AssertItoa(int n, const char* expected) {
 	char* x = ft_itoa(n);
 	if (x == NULL) {
-		perror("itoa: malloc");
-		exit(EXIT_FAILURE);
+		exitPerror("malloc");
 	}
 
 	if (strcmp(x, expected) != 0) {
@@ -18,7 +18,7 @@ static bool AssertItoa(int n, const char* expected) {
 	return true;
 }
 
-TEST_CASE("Itoa Tests", "itoa") {
+TEST_CASE("itoa", "itoa") {
 	MRTEST(AssertItoa(0, "0"));
 	MRTEST(AssertItoa(1, "1"));
 	MRTEST(AssertItoa(-1, "-1"));

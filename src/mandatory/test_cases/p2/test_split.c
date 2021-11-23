@@ -1,4 +1,5 @@
 #include "mrtest.h"
+#include "mrtest_libft.h"
 #include "libft.h"
 #include <stdbool.h>
 #include <stdlib.h>
@@ -43,8 +44,7 @@ static bool splitCompare(const char* s, char delim, char** expected) {
 static char** createStrings(size_t n, ...) {
 	char** x = calloc(n + 1, sizeof(char*));
 	if (x == NULL) {
-		perror("malloc");
-		exit(EXIT_FAILURE);
+		exitPerror("malloc");
 	}
 
 	va_list ap;
@@ -54,8 +54,7 @@ static char** createStrings(size_t n, ...) {
 		char* y = va_arg(ap, char*);
 		x[i] = strdup(y);
 		if (x[i] == NULL) {
-			perror("strdup");
-			exit(EXIT_FAILURE);
+			exitPerror("strdup");
 		}
 	}
 	va_end(ap);

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "mrtest_libft.h"
 #include "mrtest.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -9,8 +9,7 @@ static bool bzeroSizeTest(size_t n) {
 	char* x = malloc(n);
 
 	if (x == NULL) {
-		perror("malloc");
-		exit(EXIT_FAILURE);
+		exitPerror("malloc");
 	}
 
 	ft_bzero(x, n);
