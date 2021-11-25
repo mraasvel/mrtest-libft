@@ -1,5 +1,6 @@
 Other:
 
+	- CI for compilation of object files (mac, linux) + locked main branch
 	- Makefile to test mandatory, bonus executable seperately
 	- Generic syscall error functionality
 	- Syscall failure tester dlsym
