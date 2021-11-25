@@ -7,13 +7,13 @@ static bool memchrCompare(const char* x, int c, size_t n) {
 }
 
 TEST_CASE("memchr", "memchr") {
-	memchrCompare("", 'a', 0);
-	memchrCompare("1234567890", 'a', 10);
-	memchrCompare("1234567890", '0', 10);
-	memchrCompare("1234567890", '9', 10);
-	memchrCompare("1234567890", '9', 5);
-	memchrCompare("1234567890", '9', 8);
-	memchrCompare("1234567890", '9', 9);
-	memchrCompare("", 'a', 1);
-	memchrCompare("", 0, 1);
+	MRTEST(memchrCompare("", 'a', 0));
+	MRTEST(memchrCompare("1234567890", 'a', 10));
+	MRTEST(memchrCompare("1234567890", '0', 10));
+	MRTEST(memchrCompare("1234567890", '9', 10));
+	MRTEST(memchrCompare("1234567890", '9', 5));
+	MRTEST(memchrCompare("1234567890", '9', 8));
+	MRTEST(memchrCompare("1234567890", '9', 9));
+	MRTEST(memchrCompare("", 'a', 1));
+	MRTEST(memchrCompare("", 0, 1));
 }

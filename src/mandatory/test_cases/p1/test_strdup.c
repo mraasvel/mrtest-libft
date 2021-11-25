@@ -20,9 +20,9 @@ static bool strdupCompare(const char* x) {
 }
 
 TEST_CASE("strdup", "strdup") {
-	strdupCompare("1");
-	strdupCompare("");
-	strdupCompare("1234567890");
-	strdupCompare("12345\012345");
-	strdupCompare("ad9fuanjdsadcaisdcadcscdsaidcasiuhcdsaiuhdsaciuhdsaciuhadsciuhasdiua\t\nsdc");
+	MRTEST(strdupCompare("1"));
+	MRTEST(strdupCompare(""));
+	MRTEST(strdupCompare("1234567890"));
+	MRTEST(strdupCompare("12345\012345"));
+	MRTEST(strdupCompare("ad9fuanjdsadcaisdcadcscdsaidcasiuhcdsaiuhdsaciuhdsaciuhadsciuhasdiua\t\nsdc"));
 }

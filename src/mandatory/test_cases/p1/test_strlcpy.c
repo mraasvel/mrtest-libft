@@ -27,13 +27,13 @@ static bool strlcpyCompare(const char* src, size_t n) {
 }
 
 TEST_CASE("strlcpy", "strlcpy") {
-	strlcpyCompare("1234567890", 5);
-	strlcpyCompare("1234567890", 10);
-	strlcpyCompare("", 1);
-	strlcpyCompare("", 1000);
-	strlcpyCompare("1234567890", 0);
-	strlcpyCompare("d9sd8fu a9fds8 9d8f9 8sdfa9 8sdf89 fsdas9da8f ", 10000);
-	strlcpyCompare("aijfsdoijfdsaaoijsfdajsfdoijafsdoijfsdaafsijdofsdia", 20);
+	MRTEST(strlcpyCompare("1234567890", 5));
+	MRTEST(strlcpyCompare("1234567890", 10));
+	MRTEST(strlcpyCompare("", 1));
+	MRTEST(strlcpyCompare("", 1000));
+	MRTEST(strlcpyCompare("1234567890", 0));
+	MRTEST(strlcpyCompare("d9sd8fu a9fds8 9d8f9 8sdfa9 8sdf89 fsdas9da8f ", 10000));
+	MRTEST(strlcpyCompare("aijfsdoijfdsaaoijsfdajsfdoijafsdoijfsdaafsijdofsdia", 20));
 }
 
 #endif /* __APPLE__ */

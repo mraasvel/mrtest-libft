@@ -10,22 +10,22 @@ static bool strncmpCompare(const char* a, const char* b, size_t n) {
 }
 
 TEST_CASE("strncmp", "strncmp") {
-	strncmpCompare("1234567890", "1234567890", 5);
-	strncmpCompare("1234567890", "123456789a", 10);
-	strncmpCompare("1234567890", "1234567890", 0);
-	strncmpCompare("1234567890", "123456789a", 5);
-	strncmpCompare("1234567890", "123456789a", 100);
-	strncmpCompare("1234567890a", "1234567890", 100);
-	strncmpCompare("123456789a", "1234567890", 100);
-	strncmpCompare("1234567890", "1234567890", 100);
-	strncmpCompare("1", "", 100);
-	strncmpCompare("", "1", 100);
-	strncmpCompare("", "", 100);
-	strncmpCompare("", "", 0);
-	strncmpCompare("a", "", 0);
-	strncmpCompare("", "a", 0);
-	strncmpCompare("123", "abc", 0);
-	strncmpCompare("abcd", "abcd", 4);
-	strncmpCompare("abcd", "abce", 3);
-	strncmpCompare("abcd", "abd", 3);
+	MRTEST(strncmpCompare("1234567890", "1234567890", 5));
+	MRTEST(strncmpCompare("1234567890", "123456789a", 10));
+	MRTEST(strncmpCompare("1234567890", "1234567890", 0));
+	MRTEST(strncmpCompare("1234567890", "123456789a", 5));
+	MRTEST(strncmpCompare("1234567890", "123456789a", 100));
+	MRTEST(strncmpCompare("1234567890a", "1234567890", 100));
+	MRTEST(strncmpCompare("123456789a", "1234567890", 100));
+	MRTEST(strncmpCompare("1234567890", "1234567890", 100));
+	MRTEST(strncmpCompare("1", "", 100));
+	MRTEST(strncmpCompare("", "1", 100));
+	MRTEST(strncmpCompare("", "", 100));
+	MRTEST(strncmpCompare("", "", 0));
+	MRTEST(strncmpCompare("a", "", 0));
+	MRTEST(strncmpCompare("", "a", 0));
+	MRTEST(strncmpCompare("123", "abc", 0));
+	MRTEST(strncmpCompare("abcd", "abcd", 4));
+	MRTEST(strncmpCompare("abcd", "abce", 3));
+	MRTEST(strncmpCompare("abcd", "abd", 3));
 }

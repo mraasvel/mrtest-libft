@@ -28,13 +28,13 @@ static bool strlcatCompare(const char* dst, const char* src, size_t n) {
 }
 
 TEST_CASE("strlcat", "strlcat") {
-	strlcatCompare("1234567890", "1234567890", 20);
-	strlcatCompare("1234567890", "1234567890", 10);
-	strlcatCompare("1234567890", "1234567890", 5);
-	strlcatCompare("", "1234567890", 100);
-	strlcatCompare("", "1234567890", 4);
-	strlcatCompare("1234567890", "", 100);
-	strlcatCompare("1234567890", "1", 0);
+	MRTEST(strlcatCompare("1234567890", "1234567890", 20));
+	MRTEST(strlcatCompare("1234567890", "1234567890", 10));
+	MRTEST(strlcatCompare("1234567890", "1234567890", 5));
+	MRTEST(strlcatCompare("", "1234567890", 100));
+	MRTEST(strlcatCompare("", "1234567890", 4));
+	MRTEST(strlcatCompare("1234567890", "", 100));
+	MRTEST(strlcatCompare("1234567890", "1", 0));
 
 }
 

@@ -5,6 +5,8 @@
 # include "mrtest.h"
 # include <stdbool.h>
 
+// # include "/usr/include/bsd/string.h"
+
 void exitPerror(const char* x);
 
 /* Bonus Reference */
