@@ -3,4 +3,6 @@
 ## Usage
 
 1. Clone inside your libft dir (or modify `LFT_LOCATION` in `Settings.mk`)
-2. `bash run.sh` or `bash run.sh bonus`
+2. Executing tests:
+- Mandatory: `bash run.sh`
+- Bonus: `bash run.sh bonus`
