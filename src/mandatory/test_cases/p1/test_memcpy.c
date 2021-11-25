@@ -1,5 +1,4 @@
-#include "mrtest.h"
-#include "libft.h"
+#include "mrtest_libft.h"
 #include <string.h>
 
 TEST_CASE("Memcpy Test", "memcpy") {

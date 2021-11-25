@@ -1,6 +1,7 @@
 #include "mrtest_libft.h"
 #include <stdlib.h>
 #include <stdbool.h>
+#include <assert.h>
 
 t_list	*_MR_REF_lstnew(void *content) {
 	t_list* x = malloc(sizeof(t_list));
@@ -124,4 +125,58 @@ bool _MR_lstequal(t_list* a, t_list* b, bool comp(void*, void*)) {
 	}
 
 	return a == b;
+}
+
+int _MR_createlist(t_list** a, size_t size, void (*addFunction)(t_list**, t_list*), bool random) {
+	assert(a != NULL && *a == NULL);
+
+	while (size-- > 0) {
+		unsigned long value;
+		if (random) {
+			value = rand();
+		} else {
+			value = size;
+		}
+		t_list* x = _MR_REF_lstnew((void*)value);
+
+		if (!x) {
+			free(x);
+			_MR_REF_lstclear(a, NULL);
+			return -1;
+		}
+
+		addFunction(a, x);
+	}
+
+	return 0;
+}
+
+int _MR_createListAllocated(t_list** a, size_t size, bool random) {
+	assert(a != NULL);
+	assert(*a == NULL);
+
+	while (size-- > 0) {
+		int* content = malloc(1 * sizeof(int));
+		if (content == NULL) {
+			_MR_REF_lstclear(a, free);
+			return -1;
+		}
+
+		if (random) {
+			*content = rand();
+		} else {
+			*content = size;
+		}
+
+		t_list* entry = _MR_REF_lstnew(content);
+		if (entry == NULL) {
+			free(content);
+			_MR_REF_lstclear(a, free);
+			return -1;
+		}
+
+		_MR_REF_lstadd_front(a, entry);
+	}
+
+	return 0;
 }

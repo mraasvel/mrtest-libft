@@ -1,5 +1,4 @@
-#include "libft.h"
-#include "mrtest.h"
+#include "mrtest_libft.h"
 #include <stdbool.h>
 
 static bool AssertStrlen(const char* x) {

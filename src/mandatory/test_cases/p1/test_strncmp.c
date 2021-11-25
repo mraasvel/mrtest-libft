@@ -1,5 +1,4 @@
-#include "libft.h"
-#include "mrtest.h"
+#include "mrtest_libft.h"
 #include <string.h>
 #include <stdbool.h>
 

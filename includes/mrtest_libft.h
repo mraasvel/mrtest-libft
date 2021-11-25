@@ -18,6 +18,9 @@ void	_MR_REF_lstdelone(t_list *lst, void (*del)(void *));
 void	_MR_REF_lstclear(t_list **lst, void (*del)(void *));
 void	_MR_REF_lstiter(t_list *lst, void (*f)(void *));
 t_list	*_MR_REF_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 bool	_MR_lstequal(t_list* a, t_list* b, bool comp(void*, void*));
+int		_MR_createlist(t_list** a, size_t size, void (*addFunction)(t_list**, t_list*), bool random);
+int		_MR_createListAllocated(t_list** a, size_t size, bool random);
 
 #endif /* MRTEST_LIBFT_H */

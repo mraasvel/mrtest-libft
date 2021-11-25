@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "mrtest.h"
+#include <stdlib.h>
 #include <assert.h>
 #include <string.h>
 #include <unistd.h>

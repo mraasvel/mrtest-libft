@@ -19,7 +19,7 @@ static bool lstnewCompare(void* content, void (*del)(void*)) {
 	return result;
 }
 
-TEST_CASE("lstnew", "lstnew") {
+TEST_CASE("ft_lstnew", "ft_lstnew") {
 	MRTEST(lstnewCompare((void*)1, NULL));
 	MRTEST(lstnewCompare((void*)2, NULL));
 	MRTEST(lstnewCompare((void*)0, NULL));

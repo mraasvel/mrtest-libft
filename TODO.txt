@@ -1,19 +1,9 @@
-Bonus:
-
-ft_lstadd_front
-ft_lstsize
-ft_lstlast
-ft_lstadd_back
-ft_lstdelone
-ft_lstclear
-ft_lstiter
-ft_lstmap
-
 Other:
 
 	- Makefile to test mandatory, bonus executable seperately
 	- Generic syscall error functionality
 	- Syscall failure tester dlsym
+	- lst delete functions: malloc testing
 	- Malloc leak overwrite tester
 	- Moulinette, norminette check using simple script
 	- Script to run all testers together

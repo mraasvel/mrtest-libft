@@ -1,7 +1,6 @@
 #ifdef __APPLE__
 
-#include "libft.h"
-#include "mrtest.h"
+#include "mrtest_libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
