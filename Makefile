@@ -8,18 +8,19 @@ EXECS = $(NAME) $(NAME_BONUS)
 LFT = $(LFT_LOCATION)/$(LFT_NAME)
 
 # Source Files
-SDIR = src
-ODIR = obj
-DDIR = dep
-IDIR = includes
+IMPDIR = implementation
+SDIR = $(IMPDIR)/src
+ODIR = $(IMPDIR)/obj
+DDIR = $(IMPDIR)/dep
+IDIR = $(IMPDIR)/includes
 LDIR = $(LFT_LOCATION)
 
 ifdef BONUS
-	ODIR = obj/bonus
-	DDIR = dep/bonus
+	ODIR = $(IMPDIR)/obj/bonus
+	DDIR = $(IMPDIR)/dep/bonus
 	NAME = $(NAME_BONUS)
 else
-	SDIR = src/mandatory
+	SDIR = $(IMPDIR)/src/mandatory
 endif # Bonus
 
 # Flags
@@ -32,19 +33,23 @@ IFLAGS = -I$(IDIR)
 SRC := $(shell find $(SDIR) -name "*.c" -type f)
 OBJ := $(patsubst $(SDIR)/%.c,$(ODIR)/%.o,$(SRC))
 DEP := $(patsubst $(SDIR)/%.c,$(DDIR)/%.d,$(SRC))
+DEPENDENCIES := Makefile
 
 # Compilation
 all:
-	@$(MAKE) -C $(LFT_LOCATION) -j8
-	@$(MAKE) $(NAME) -j8
+	@$(MAKE) -C $(LFT_LOCATION) -j4
+	@$(MAKE) $(NAME) -j4
 
 $(NAME): $(OBJ) $(LFT)
-		$(CC) -o $@ $(OBJ) $(LFLAGS)
-$(OBJ): $(ODIR)/$(SUBDIR)%.o: $(SDIR)/%.c Makefile
+		@echo Compiling $@
+		@$(CC) -o $@ $(OBJ) $(LFLAGS)
+$(OBJ): $(ODIR)/$(SUBDIR)%.o: $(SDIR)/%.c $(DEPENDENCIES)
 		@mkdir -p $(@D)
-		$(CC) -c -o $@ $< $(CFLAGS) $(IFLAGS)
+		@echo "Compling: $@"
+		@$(CC) -c -o $@ $< $(CFLAGS) $(IFLAGS)
 $(DDIR)/$(SUBDIR)%.d: $(SDIR)/%.c
 		@mkdir -p $(@D)
+		@echo "Creating Dependency Rule: $@"
 		@$(CC) $< -MM -MF $@ -MT $(ODIR)/$(SUBDIR)$*.o $(CFLAGS) $(IFLAGS)
 
 $(LFT):
@@ -63,3 +68,9 @@ bonus:
 	$(MAKE) all BONUS=1
 
 -include $(DEP)
+
+# CI Compilation Test
+.PHONY: TEST_OBJ
+TEST_OBJ:
+	@echo Compiling object files only
+	@$(MAKE) $(OBJ) -j4
