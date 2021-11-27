@@ -18,7 +18,7 @@ static bool strjoinCompare(const char* s1, const char* s2, const char* exp) {
 	return result;
 }
 
-TEST_CASE("strjoin", "strjoin") {
+TEST_CASE("ft_strjoin", "ft_strjoin") {
 	MRTEST(strjoinCompare("", "1234567890", "1234567890"));
 	MRTEST(strjoinCompare("1234567890", "1234567890", "12345678901234567890"));
 	MRTEST(strjoinCompare("1234567890", "", "1234567890"));

@@ -1,7 +1,7 @@
 #include "mrtest_libft.h"
 #include <stdlib.h>
 
-TEST_CASE("TestAtoi", "atoi") {
+TEST_CASE("ft_atoi", "ft_atoi") {
 	MRTEST(ft_atoi("1") == atoi("1"));
 	MRTEST(ft_atoi("-1") == atoi("-1"));
 	MRTEST(ft_atoi("  1") == atoi("  1"));

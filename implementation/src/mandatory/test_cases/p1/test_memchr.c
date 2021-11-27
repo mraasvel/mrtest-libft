@@ -6,7 +6,7 @@ static bool memchrCompare(const char* x, int c, size_t n) {
 	return memchr(x, c, n) == ft_memchr(x, c, n);
 }
 
-TEST_CASE("memchr", "memchr") {
+TEST_CASE("ft_memchr", "ft_memchr") {
 	MRTEST(memchrCompare("", 'a', 0));
 	MRTEST(memchrCompare("1234567890", 'a', 10));
 	MRTEST(memchrCompare("1234567890", '0', 10));

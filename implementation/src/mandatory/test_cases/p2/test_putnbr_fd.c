@@ -36,7 +36,7 @@ static bool putnbrCompare(int n) {
 	return result;
 }
 
-TEST_CASE("putnbr", "putnbr") {
+TEST_CASE("ft_putnbr_fd", "ft_putnbr_fd") {
 	MRTEST(putnbrCompare(1));
 	MRTEST(putnbrCompare(-1));
 	MRTEST(putnbrCompare(0));

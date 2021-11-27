@@ -6,7 +6,7 @@ static bool compareStrchr(const char* x, int c) {
 	return strchr(x, c) == ft_strchr(x, c);
 }
 
-TEST_CASE("strchr", "strchr") {
+TEST_CASE("ft_strchr", "ft_strchr") {
 	MRTEST(compareStrchr("abc", '\0'));
 	MRTEST(compareStrchr("abc", 'a'));
 	MRTEST(compareStrchr("abc", 'b'));

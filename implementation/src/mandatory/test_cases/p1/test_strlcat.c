@@ -27,7 +27,7 @@ static bool strlcatCompare(const char* dst, const char* src, size_t n) {
 	return memcmp(st, ft, n + 1) == 0;
 }
 
-TEST_CASE("strlcat", "strlcat") {
+TEST_CASE("ft_strlcat", "ft_strlcat") {
 	MRTEST(strlcatCompare("1234567890", "1234567890", 20));
 	MRTEST(strlcatCompare("1234567890", "1234567890", 10));
 	MRTEST(strlcatCompare("1234567890", "1234567890", 5));

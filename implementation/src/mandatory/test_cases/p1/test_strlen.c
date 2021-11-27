@@ -5,7 +5,7 @@ static bool AssertStrlen(const char* x) {
 	return strlen(x) == ft_strlen(x);
 }
 
-TEST_CASE("TestStrlen", "strlen") {
+TEST_CASE("ft_strlen", "ft_strlen") {
 	MRTEST(AssertStrlen(""));
 	MRTEST(AssertStrlen("9fa98sduf98asudnf98aunsd98fvunas98dfunva98sdufn98asudnf9asdfv"));
 	MRTEST(AssertStrlen("1234\n\t1234\n\t\01"));

@@ -1,7 +1,7 @@
 #include "mrtest_libft.h"
 #include <string.h>
 
-TEST_CASE("Memcpy Test", "memcpy") {
+TEST_CASE("ft_memcpy", "ft_memcpy") {
 	char st_dst[15] = "";
 	char ft_dst[15] = "";
 	char src[] = "Hello, There";
@@ -11,7 +11,7 @@ TEST_CASE("Memcpy Test", "memcpy") {
 	MRTEST(strcmp(ft_dst, st_dst) == 0);
 }
 
-TEST_CASE("Memcpy No Copy", "memcpy") {
+TEST_CASE("ft_memcpy", "ft_memcpy") {
 	char x[10];
 
 	memset(x, 42, sizeof(x));

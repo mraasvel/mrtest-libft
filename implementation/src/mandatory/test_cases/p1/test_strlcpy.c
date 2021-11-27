@@ -26,7 +26,7 @@ static bool strlcpyCompare(const char* src, size_t n) {
 	return memcmp(st, ft, n + 1) == 0;
 }
 
-TEST_CASE("strlcpy", "strlcpy") {
+TEST_CASE("ft_strlcpy", "ft_strlcpy") {
 	MRTEST(strlcpyCompare("1234567890", 5));
 	MRTEST(strlcpyCompare("1234567890", 10));
 	MRTEST(strlcpyCompare("", 1));

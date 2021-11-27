@@ -19,7 +19,7 @@ static bool strdupCompare(const char* x) {
 	return result == 0;
 }
 
-TEST_CASE("strdup", "strdup") {
+TEST_CASE("ft_strdup", "ft_strdup") {
 	MRTEST(strdupCompare("1"));
 	MRTEST(strdupCompare(""));
 	MRTEST(strdupCompare("1234567890"));

@@ -1,7 +1,7 @@
 #include "mrtest_libft.h"
 #include <string.h>
 
-TEST_CASE("Memmove Backward Copy", "memmove") {
+TEST_CASE("ft_memmove", "ft_memmove") {
 	char st_dest[15] = "0123456789";
 	char ft_dest[15] = "0123456789";
 
@@ -10,7 +10,7 @@ TEST_CASE("Memmove Backward Copy", "memmove") {
 	MRTEST(strcmp(st_dest, ft_dest) == 0);
 }
 
-TEST_CASE("Memmove Forward Copy", "memmove") {
+TEST_CASE("ft_memmove", "ft_memmove") {
 	char st_dest[15] = "0123456789";
 	char ft_dest[15] = "0123456789";
 

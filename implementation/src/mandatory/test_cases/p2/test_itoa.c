@@ -16,7 +16,7 @@ static bool AssertItoa(int n, const char* expected) {
 	return true;
 }
 
-TEST_CASE("itoa", "itoa") {
+TEST_CASE("ft_itoa", "ft_itoa") {
 	MRTEST(AssertItoa(0, "0"));
 	MRTEST(AssertItoa(1, "1"));
 	MRTEST(AssertItoa(-1, "-1"));
