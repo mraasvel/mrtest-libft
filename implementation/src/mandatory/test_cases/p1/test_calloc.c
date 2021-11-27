@@ -26,7 +26,7 @@ static bool callocCompare(size_t nmemb, size_t size) {
 	return result;
 }
 
-TEST_CASE("TestCalloc", "calloc") {
+TEST_CASE("ft_calloc", "ft_calloc") {
 	MRTEST(callocCompare(2349857, 1));
 	MRTEST(callocCompare(50, 0));
 	MRTEST(callocCompare(0, 50));

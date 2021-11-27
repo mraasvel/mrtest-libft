@@ -17,7 +17,7 @@ static bool strtrimCompare(const char* s, const char* set, const char* expected)
 	return result;
 }
 
-TEST_CASE("strtrim", "strtrim") {
+TEST_CASE("ft_strtrim", "ft_strtrim") {
 	MRTEST(strtrimCompare("\t\tn1234567890\t\t\n", "\n\t", "n1234567890"));
 	MRTEST(strtrimCompare("\t\tn12345\t\t67890\t\t\n", "\n\t", "n12345\t\t67890"));
 	MRTEST(strtrimCompare("", "123567890", ""));

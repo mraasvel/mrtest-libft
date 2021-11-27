@@ -1,9 +1,7 @@
 Other:
 
-	- CI for compilation of object files (mac, linux) + locked main branch
 	- Install script for libbsd-dev and compilation option to test
-	- Makefile to test mandatory, bonus executable seperately
-	- Generic syscall error functionality
+
 	- Syscall failure tester dlsym
 	- lst delete functions: malloc testing
 	- Malloc leak overwrite tester

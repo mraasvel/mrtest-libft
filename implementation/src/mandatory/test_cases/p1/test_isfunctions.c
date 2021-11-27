@@ -15,30 +15,30 @@ static bool CompareIsFunctions(IsFunctionType original, IsFunctionType ft_versio
 	return true;
 }
 
-TEST_CASE("IsAlnum", "isalnum") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(isalnum, ft_isalnum));
 }
 
-TEST_CASE("IsAlpha", "isalpha") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(isalpha, isalpha));
 }
 
-TEST_CASE("IsAscii", "isascii") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(isascii, isascii));
 }
 
-TEST_CASE("IsDigit", "isdigit") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(isdigit, isdigit));
 }
 
-TEST_CASE("IsPrint", "isprint") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(isprint, isprint));
 }
 
-TEST_CASE("ToUpper", "toupper") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(toupper, toupper));
 }
 
-TEST_CASE("ToLower", "tolower") {
+TEST_CASE("ft_isfunctions", "ft_isfunctions") {
 	MRTEST(CompareIsFunctions(tolower, tolower));
 }

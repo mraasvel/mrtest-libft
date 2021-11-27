@@ -36,13 +36,13 @@ _MR_MEMSET_ERROR:
 	return result;
 }
 
-TEST_CASE("Memset Tests", "memset") {
+TEST_CASE("ft_memset", "ft_memset") {
 	MRTEST(compareMemset('a', 1024));
 	MRTEST(compareMemset(0, 1024));
 	MRTEST(compareMemset(0, 0));
 }
 
-TEST_CASE("Memset Partial Copy", "memset") {
+TEST_CASE("ft_memset", "ft_memset") {
 
 	const int size = 1024;
 	const int set = 512;

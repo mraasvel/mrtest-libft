@@ -24,7 +24,7 @@ static bool bzeroSizeTest(size_t n) {
 	return true;
 }
 
-TEST_CASE("TestBzero", "bzero") {
+TEST_CASE("ft_bzero", "ft_bzero") {
 	MRTEST(bzeroSizeTest(1));
 	MRTEST(bzeroSizeTest(1024));
 }

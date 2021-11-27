@@ -9,7 +9,7 @@ static bool strncmpCompare(const char* a, const char* b, size_t n) {
 	return st == 0 ? st == ft : ((st < 0 && ft < 0) || (st > 0 && ft > 0));
 }
 
-TEST_CASE("strncmp", "strncmp") {
+TEST_CASE("ft_strncmp", "ft_strncmp") {
 	MRTEST(strncmpCompare("1234567890", "1234567890", 5));
 	MRTEST(strncmpCompare("1234567890", "123456789a", 10));
 	MRTEST(strncmpCompare("1234567890", "1234567890", 0));

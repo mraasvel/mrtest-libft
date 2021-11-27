@@ -9,7 +9,7 @@ static bool memcmpCompare(const void* a, const void* b, size_t n) {
 	return st == 0 ? st == ft : ((st < 0) && (ft < 0)) || ((st > 0) && (ft > 0));
 }
 
-TEST_CASE("memcmp", "memcmp") {
+TEST_CASE("ft_memcmp", "ft_memcmp") {
 	MRTEST(memcmpCompare("1234567890", "1234567890", 10));
 	MRTEST(memcmpCompare("1234567890", "123456789", 10));
 	MRTEST(memcmpCompare("1234567890", "123456789", 9));

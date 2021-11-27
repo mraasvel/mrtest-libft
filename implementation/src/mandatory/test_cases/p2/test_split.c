@@ -59,7 +59,7 @@ static char** createStrings(size_t n, ...) {
 	return x;
 }
 
-TEST_CASE("split", "split") {
+TEST_CASE("ft_split", "ft_split") {
 	MRTEST(splitCompare("aaaaaaaaaaaaaaaaa", 'a', createStrings(0)));
 	MRTEST(splitCompare("a b c d e f g", ' ', createStrings(7, "a", "b", "c", "d", "e", "f", "g")));
 	MRTEST(splitCompare("a b1234 c dasdfij\t    aosdfjas\ndfe       fasdoifj gaosdifjaoisdjf", ' ',

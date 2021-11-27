@@ -26,7 +26,7 @@ static bool striteriCompare(const char* s, void (*f)(unsigned int, char*), const
 	return result;
 }
 
-TEST_CASE("striteri", "striteri") {
+TEST_CASE("ft_striteri", "ft_striteri") {
 	MRTEST(striteriCompare("1234", &evenToLower, "1234"));
 	MRTEST(striteriCompare("abcd", &evenToUpper, "AbCd"));
 	MRTEST(striteriCompare("ABCD", &evenToLower, "aBcD"));

@@ -22,7 +22,7 @@ static bool strmapiCompare(const char* s, char (*f)(unsigned int, char), const c
 	return result;
 }
 
-TEST_CASE("strmapi", "strmapi") {
+TEST_CASE("ft_strmapi", "ft_strmapi") {
 	MRTEST(strmapiCompare("1234567890", &evenToUpper, "1234567890"));
 	MRTEST(strmapiCompare("abcdefghijklmnop", &evenToUpper, "AbCdEfGhIjKlMnOp"));
 	MRTEST(strmapiCompare("ABCDEFGHIJKLMNOPQRSTUVWXYZ", &evenToLower, "aBcDeFgHiJkLmNoPqRsTuVwXyZ"));
