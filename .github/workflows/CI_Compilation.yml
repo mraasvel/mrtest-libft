@@ -1,4 +1,4 @@
-name: Catch CI tests
+name: CI Compilation Ubuntu/MacOS
 
 on:
   pull_request:
